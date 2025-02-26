@@ -31,11 +31,19 @@ The pipeline consists of six main steps (see [`3d_tree_crown.ipynb`](./3d_tree_c
 ├── assets/
 │ └── screenshots/ # Visualization examples
 └── environment.yml # Conda environment
-## Usage
-Download AHN4 data from geotiles.nl and place in data/AHN4/
-For Kavel10 data, contact Kavel10 at richard@kavel10.nl or visit https://kavel10.nl/producten/lidar-airborne/
 
-Configure paths in 3d_tree_crown.ipynb:
+## Usage
+
+1. Download AHN4 data from [geotiles.nl](http://geotiles.nl) and place in `data/AHN4/`
+2. For Kavel10 data:
+   - Contact: [richard@kavel10.nl](mailto:richard@kavel10.nl)
+   - Website: [https://kavel10.nl/producten/lidar-airborne/](https://kavel10.nl/producten/lidar-airborne/)
+3. Configure paths in `3d_tree_crown.ipynb`:
+```python
+os.chdir('./data/AHN4')  # Update to relative path
+las = laspy.read("class2.las") 
+
+
 ##Key Features
 ###Point Cloud Processing
 
