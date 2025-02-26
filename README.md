@@ -44,59 +44,52 @@ os.chdir('./data/AHN4')  # Update to relative path
 las = laspy.read("class2.las") 
 
 
-##Key Features
-###Point Cloud Processing
+# LiDAR Processing Pipeline
 
-####LAS file loading and attribute extraction
+## Key Features
 
-####Z-score based outlier removal
+### Point Cloud Processing
+- **LAS file loading and attribute extraction**
+- **Z-score based outlier removal**
+- **Ground/vegetation classification**
 
-####Ground/vegetation classification
+### Spatial Analysis
+- **Kriging interpolation for DEM generation**
+- **Elevation normalization**
 
-###Spatial Analysis
+### 3D Visualization
+- **Interactive Open3D visualizations**
+- **Custom color mapping for classifications**
 
-####Kriging interpolation for DEM generation
+### Metric Extraction
+- **Tree height calculation**
+- **Crown diameter estimation**
+- **Volume approximation**
 
-****Elevation normalization
+## Performance
+The pipeline successfully processes standard AHN4 tiles (500m x 500m) in **5-8 minutes** on moderate hardware. Typical results include:
 
-###3D Visualization
+- **200-500 trees detected per tile**
+- **Height estimation accuracy:** ±0.5m
+- **Diameter estimation consistency:** 85% within 10% error margin
 
-####Interactive Open3D visualizations
+## Contributing
+Contributions are welcome! Please:
 
-****Custom color mapping for classifications
+1. Open an **issue** to discuss proposed changes.
+2. Create a **feature branch** for development.
+3. Submit a **pull request** with test cases.
 
-***Metric Extraction
+## Acknowledgements
+Developed for **LiDAR analysis research** using open **AHN4 data** from the Dutch government. This project incorporates components from:
 
-####Tree height calculation
+- **PyKrige** for spatial interpolation
+- **Open3D** for 3D visualization
+- **LasPy** for LAS file processing
 
-####Crown diameter estimation
+## License
+This project is licensed under the **European Union Public License 1.2 (EUPL-1.2)**.
 
-****Volume approximation
-
-##Performance
-The pipeline successfully processes standard AHN4 tiles (500m x 500m) in 5-8 minutes on moderate hardware. Typical results include:
-
-200-500 trees detected per tile
-
-Height estimation accuracy: ±0.5m
-
-Diameter estimation consistency: 85% within 10% error margin
-
-Contributing
-Contributions welcome! Please:
-
-Open an issue to discuss proposed changes
-
-Create a feature branch for development
-
-Submit a pull request with test cases
-
-Acknowledgements
-Developed for LiDAR analysis research using open AHN4 data from the Dutch government. Incorporates components from:
-
-PyKrige for spatial interpolation
-
-Open3D for 3D visualization
 
 LasPy for LAS file processing
 
