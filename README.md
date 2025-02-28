@@ -19,7 +19,7 @@ The pipeline consists of six main steps (see [`notebooks/3d_tree_crown.ipynb`](.
 |:---:|:---:|
 | Raw LiDAR Point Cloud | Classified Ground & Vegetation |
 
-| ![DEM Visualization](./assets/screenshots/dem.png) | ![3D Crown Analysis](./assets/screenshots/3d_analysis.png) |
+| ![DEM Visualization](./assets/screenshots/dem.png) | ![3D Crown Analysis](crwon_m.png) |
 |:---:|:---:|
 | Digital Elevation Model | 3D Crown Metrics Visualization |
 
