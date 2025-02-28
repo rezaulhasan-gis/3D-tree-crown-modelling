@@ -15,13 +15,13 @@ The pipeline consists of six main steps (see [`notebooks/3d_tree_crown.ipynb`](.
 
 ## 📷 Example Visualizations
 
-| ![Raw Point Cloud](./assets/screenshots/raw_points.png) | ![Classified Points](./assets/screenshots/classified.png) |
+| ![Methodology](method.png) | ![Tree detected using Commercial data(sample)](K_10_tree-detected.png) |
 |:---:|:---:|
-| Raw LiDAR Point Cloud | Classified Ground & Vegetation |
+| Methodolody | Tree detected using Commercial data |
 
-| ![DEM Visualization](./assets/screenshots/dem.png) | ![3D Crown Analysis](crwon_m.png) |
+| ![Tree detected using open source data(sample)](AHN4_tree-detected.png) | ![3D Crown Analysis](crwon_m.png) |
 |:---:|:---:|
-| Digital Elevation Model | 3D Crown Metrics Visualization |
+| Tree detected using open source data(sample | 3D Crown Metrics Visualization |
 
 ---
 
