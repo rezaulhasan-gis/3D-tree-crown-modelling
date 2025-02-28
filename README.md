@@ -129,6 +129,3 @@ Developed for **LiDAR analysis research** using open **AHN4 data** from the Dutc
 
 ---
 
-## 📜 License
-
-This project is licensed under the **European Union Public License 1.2 (EUPL-1.2)**.
