@@ -2,7 +2,7 @@ This repository contains a pipeline for analyzing tree crown metrics and generat
 
 ## 📌 Pipeline Overview
 
-The pipeline consists of six main steps (see [`notebooks/3d_tree_crown.ipynb`](./notebooks/3d_tree_crown.ipynb)):
+The pipeline consists of six main steps (see [`notebooks/3d_tree_crown.ipynb`](3D_tree_crown_modelling.ipynb)):
 
 1. **Data Loading**: Read and process LAS point cloud files.
 2. **Classification**: Separate ground and vegetation points using AHN4 classification labels.
