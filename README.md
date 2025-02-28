@@ -61,37 +61,50 @@ las = laspy.read("class2.las")
 
 ---
 
-# 🌲 LiDAR Processing Pipeline
+# 🌲 Tree crown volume estimation Pipeline
 
 ## 🔹 Key Features
 
-### 📌 Point Cloud Processing
-- LAS file loading and attribute extraction.
-- Z-score based outlier removal.
-- Ground/vegetation classification.
+### Filtering Ground Points:
+Filters ground points by selecting classification **class 2** from the LiDAR point cloud.
 
-### 📌 Spatial Analysis
-- Kriging interpolation for DEM generation.
-- Elevation normalization.
+### 3D Tree Detection & Processing:
+- Uses **KDTree** and **ConvexHull** algorithms from Scipy for tree segmentation and geometric calculations.
+- Utilizes `griddata()` and `UnivariateSpline()` for surface interpolation.
 
-### 📌 3D Visualization
-- Interactive Open3D visualizations.
-- Custom color mapping for classifications.
+### Point Cloud Classification & Trunk Extraction:
+- Applies statistical methods like **z-score normalization** to refine point classifications.
+- Uses custom utilities (`trunk_utils`) for extracting and analyzing tree trunks.
 
-### 📌 Metric Extraction
-- Tree height calculation.
-- Crown diameter estimation.
-- Volume approximation.
+### Geospatial Analysis:
+- Uses **Geopandas** and **Shapely** to generate polygonal tree crown representations.
+
 
 ---
 
-## ⚡ Performance
+## Performance Metrics 🚀
 
-The pipeline efficiently processes standard AHN4 tiles (500m x 500m) in **5-8 minutes** on moderate hardware. Typical results include:
+| **Dataset**  | **Precision** | **Recall** | **F1 Score** |
+|-------------|-------------|-----------|------------|
+| **AHN4**   | 0.83        | 0.67      | 0.74       |
+| **Kavel10** | 1.00        | 0.87      | 0.93       |
 
-- **200-500 trees detected per tile**.
-- **Height estimation accuracy:** ±0.5m.
-- **Diameter estimation consistency:** 85% within a 10% error margin.
+🔹 **Kavel10 dataset outperformed AHN4**, achieving **higher accuracy and recall** in tree detection.  
+🔹 **Crown volume estimation RMSE**:  
+
+- **AHN4**: 16.94 m³  
+- **Kavel10**: 12.31 m³ (More accurate)  
+
+---
+
+## **Key Findings & Challenges**
+
+✅ **LiDAR-based 3D modelling effectively estimates tree crown volumes.**  
+✅ **AHN4 is freely available but has lower accuracy due to misclassification.**  
+✅ **Kavel10 has higher accuracy but is expensive and requires intensive reclassification.**  
+⚠️ **Limited validation data—small subset used for testing.**  
+⚠️ **High computational cost for large-scale processing.**  
+
 
 ---
 
@@ -112,6 +125,7 @@ Developed for **LiDAR analysis research** using open **AHN4 data** from the Dutc
 - **PyKrige** for spatial interpolation.
 - **Open3D** for 3D visualization.
 - **LasPy** for LAS file processing.
+- **[Utils](https://amsterdamintelligence.com/)** for tree detection, developed by Amsterdam Intelligence.
 
 ---
 
